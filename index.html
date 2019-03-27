@@ -5,13 +5,14 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/scrips.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Mad Lib</title>
   </head>
   <body>
     <div class="container">
       <h1>Fill in the blanks to write your story!</h1>
-      <form id="blanks" action="index.html" method="post">
+
+      <form>
         <div class="form-group">
           <label for="verb1">Verb:</label>
           <input id="verb1" class="form-control" type="text">
@@ -36,8 +37,14 @@
           <label for="adjective">Adjective:</label>
           <input id="adjective" class="form-control" type="text">
         </div>
-        <button type="submit" class="btn">Show me the monstosity I have created!</button>
+        <button type="submit" class="btn btn-warning">Show me the monstosity I have created!</button>
       </form>
+
+      <div id="story">
+        <h1>A amazing story and adventure</h1>
+        <p>Mary <span class="verb1"></span> to the <span class="place"></span> and wanted <span class="noun"></span> so she could <span class="verb2"></span> at home. Now Mary is <span class="adjective"></span></p>
+
+      </div>
     </div>
   </body>
 </html>
