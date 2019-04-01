@@ -1,19 +1,15 @@
 $(document).ready(function() {
   $('form').submit(function(event) {
-    var verb1Input = $('input#verb1').val();
-    var placeInput = $('input#place').val();
-    var nounInput = $('input#noun').val();
-    var verb2Input = $('input#verb2').val();
-    var adjectiveInput = $('input#adjective').val();
 
-    $('.verb1').text(verb1Input);
-    $('.place').text(placeInput);
-    $('.noun').text(nounInput);
-    $('.verb2').text(verb2Input);
-    $('.adjective').text(adjectiveInput);
+    var inputs = ["verb1", "place", "noun", "verb2", "adjective"]
+    inputs.forEach(function(input) {
+      var answerInput = $("input#" + input).val();
+      // var verb1Input = $('input#verb1').val();
+      $("." + input).text(answerInput);
+      // $('.verb1').text(verb1Input);
+    })
 
     $('#story').show();
-
     event.preventDefault();
   });
 });
