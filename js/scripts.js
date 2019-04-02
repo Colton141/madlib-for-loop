@@ -18,8 +18,10 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     var userAnswers = ["verb1", "place", "noun", "verb2", "adjective"];
     for (index = 0; index < userAnswers.length; index +=1) {
+      var storyOutput = $("input#" + userAnswers[index]).val();
       alert($("input#" + userAnswers[index]).val());
-      $("." + userAnswers[index]).text($("input#" + userAnswers[index]).val())
+      // $("." + userAnswers[index]).text($("input#" + userAnswers[index]).val())
+        $("." + userAnswers[index]).text(storyOutput);
     }
 
     $('#story').show();
